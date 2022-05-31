@@ -177,7 +177,7 @@
     - vlp16 (default)  :: Velodyne VLP16
     - vlp32e           :: Velodyne HDL-32E
   -->
-  <xacro:if value="$(optenv JACKAL_LASER_3D 0)">
+  <xacro:if value="$(optenv JACKAL_LASER_3D 1)">
     <xacro:property name="mount" value="$(optenv JACKAL_LASER_3D_MOUNT mid)" />
     <xacro:property name="topic" value="$(optenv JACKAL_LASER_3D_TOPIC mid/points)" />
     <xacro:property name="tower" value="$(optenv JACKAL_LASER_3D_TOWER 1)" />
@@ -413,7 +413,7 @@
   </xacro:if>
 
   <!-- BlackflyS Camera -->
-  <xacro:include filename="$(find flir_camera_description)/urdf/flir_blackflys.urdf.xacro"/>
+  <!--<xacro:include filename="$(find flir_camera_description)/urdf/flir_blackflys.urdf.xacro"/>
   <xacro:if value="$(optenv JACKAL_BLACKFLY 0)">
     <xacro:property name="prefix" value="$(optenv JACKAL_BLACKFLY_PREFIX front_camera)"/>
     <xacro:property name="parent" value="$(optenv JACKAL_BLACKFLY_PARENT front_mount)"/>
@@ -425,7 +425,7 @@
       <parent link="${parent}"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
-  </xacro:if>
+  </xacro:if> -->
 
   <!-- Fender Accessories --> 
   <xacro:if value="$(optenv JACKAL_FRONT_ACCESSORY_FENDER 0)">
